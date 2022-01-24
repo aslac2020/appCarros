@@ -1,0 +1,45 @@
+.breadcrumb {
+  background-color: rgb(31, 75, 219);
+  font-size: 25px;
+  color: white;
+}
+
+.btn-custom {
+	padding: 1px 15px 3px 2px;
+	border-radius: 100px;
+
+}
+
+.iconCar {
+  font-size: 30px;
+  margin-left: 5px;
+}
+
+.buttons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+
+}
+
+.btnAddCar{
+  cursor: pointer;
+  font-weight: bold;
+  background-color: blue;
+  color: white;
+  border-color: transparent;
+  border-radius: 2px;
+  width: 220px;
+
+  transition: .2s;
+
+}
+
+.btnAddCar:hover{
+  background-color: rgb(99, 128, 161);
+}
+
+
+
+

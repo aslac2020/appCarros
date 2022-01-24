@@ -1,0 +1,48 @@
+<!-- Navbar -->
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <mat-icon class="iconCar">directions_car</mat-icon>
+    <li class="breadcrumb-item activate" aria-current="page" style="margin-left: 10px;margin-top: 4px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">Gerenciamento de Carros</li>
+  </ol>
+</nav>
+
+<!-- Corpo -->
+
+<div class="container">
+  <div class="card list-card">
+    <h5 class="card-header" style="font-size:25px; background-color: blue; color: white; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Lista de Carros</h5>
+    <div class="card-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Modelo</th>
+            <th scope="col">Cor</th>
+            <th scope="col">Preço</th>
+            <th scope="col">Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let car of cars">
+            <td>{{car.id}}</td>
+            <td>{{car.model}}</td>
+            <td>{{car.color}}</td>
+            <td>{{car.price | currency: 'BRL' }}</td>
+            <td>
+              <button type="button" class="btn btn-primary btn-sm" routerLink="/detail-car/{{car.id}}">Detalhes</button>
+              <button type="button" class="btn btn-warning btn-sm ml-1" routerLink="/car-edit/{{car.id}}">Editar</button>
+              <button type="button" class="btn btn-danger btn-sm ml-1" (click)="deleteCar(car)">Deletar</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+  <div class="buttons">
+    <button class="btnAddCar" routerLink="new-car"><mat-icon class="icnAdd">add_circle</mat-icon> Adicionar Carro</button>
+  </div>
+
+</div>
+
+

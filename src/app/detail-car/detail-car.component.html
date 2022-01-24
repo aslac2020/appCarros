@@ -1,0 +1,19 @@
+<div class="card add-car">
+  <h5 class="card-header" style="background-color: blue; color: white; font-size: 25px;">Detalhes do carro</h5>
+  <div class="card-body">
+    <form [formGroup]="checkoutForm" >
+      <div class="form-group">
+        <label for="id">Id</label>
+        <input type="number" name="id" formControlName="id" class="form-control" readonly>
+        <label for="model">Modelo</label>
+        <input type="text" name="model" formControlName="model" class="form-control" readonly>
+        <label for="color">Cor</label>
+        <input type="text" name="color" formControlName="color" class="form-control" readonly>
+        <label for="price">Price</label>
+        <input type="number" name="price" formControlName="price" class="form-control" readonly>
+      </div>
+      <button type="button" class="btn btn-primary btn-sm" routerLink="">VOLTAR</button>
+    </form>
+  </div>
+</div>
+

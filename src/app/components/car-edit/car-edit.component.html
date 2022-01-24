@@ -1,0 +1,16 @@
+<div class="card add-car">
+  <h5 class="card-header" style="background-color: blue; color: white; font-size: 25px;">Atualizar carro</h5>
+  <div class="card-body">
+    <form [formGroup]="checkoutForm" >
+      <div class="form-group">
+        <label for="model">Modelo</label>
+        <input type="text" name="model" formControlName="model" class="form-control">
+        <label for="color">Cor</label>
+        <input type="text" name="color" formControlName="color" class="form-control">
+        <label for="price">Price</label>
+        <input type="number" name="price" formControlName="price" class="form-control">
+      </div>
+      <button type="button" class="btn btn-primary btn-sm" (click)="UpdateFormCar()">SALVAR</button>
+    </form>
+  </div>
+</div>

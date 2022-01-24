@@ -1,0 +1,19 @@
+<div class="card add-car">
+  <h5 class="card-header" style="background-color: blue; color: white; font-size: 25px;">Adicionar carro</h5>
+  <div class="card-body">
+    <form [formGroup]="checkoutForm" (submit)="signNewCar()" >
+      <div class="form-group">
+        <!-- <label for="id">Id</label>
+        <input type="number" name="id" formControlName="id" class="form-control"> -->
+        <label for="model">Modelo</label>
+        <input type="text" name="model" formControlName="model" class="form-control">
+        <label for="color">Cor</label>
+        <input type="text" name="color" formControlName="color" class="form-control">
+        <label for="price">Price</label>
+        <input type="number" name="price" formControlName="price" class="form-control">
+      </div>
+      <button class="btn btn-primary btn-sm" [disabled]="checkoutForm.invalid">SALVAR</button>
+      <button class="btn btn-warning btn-sm ml-2" style="color: white" routerLink="">VOLTAR</button>
+    </form>
+  </div>
+</div>
